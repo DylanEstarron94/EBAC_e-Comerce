@@ -1,3 +1,5 @@
+@use "./base" as *;
+@use "./layout" as *;
 .products{
     .products__item {
             @include flexbox;

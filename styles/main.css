@@ -10,7 +10,7 @@
 /*
 -------------------------------------------------EXTENDS---------------------------------------------------------
 */
-main .products button {
+.products button {
   cursor: pointer;
   width: 100%;
   padding: 15px;
@@ -28,9 +28,6 @@ main .products button {
 */
 /*
 -------------------------------------------------MEDIA QUERIES-------------------------------------------------------
-*/
-/*
--------------------------------------------------ESTILOS----------------------------------------------
 */
 * {
   box-sizing: border-box;
@@ -63,7 +60,6 @@ header {
 header i {
   width: 35px;
   cursor: pointer;
-  display: flex;
 }
 header i img {
   width: 100%;
@@ -118,22 +114,6 @@ main .products {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
 }
-main .products article {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px #22221f;
-  overflow: hidden;
-  background-color: #fff;
-  transition: all, 0.6s, ease;
-}
-@media (hover: hover) {
-  main .products article:hover {
-    transform: scale(1.05);
-  }
-}
 main .products h3 {
   font-weight: 600;
   font-size: 17px;
@@ -154,7 +134,7 @@ main .cart {
   padding: 25px;
   box-sizing: border-box;
   position: fixed;
-  right: -100%;
+  right: 0%;
   top: 0;
   height: 100vh;
   overflow-y: auto;
@@ -172,6 +152,7 @@ main .cart div {
   border-bottom: 1px solid #22221f;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
 }
 main .cart img {
@@ -202,6 +183,9 @@ main .cart i img {
   }
   main .cart .cart__item .cart__item__img {
     width: 80px;
+  }
+  main .cart .cart__item .cart__item__icon img {
+    width: 25px;
   }
 }
 @media screen and (max-width: 30rem) {
@@ -309,5 +293,22 @@ footer nav i img {
 @media screen and (max-width: 30rem) {
   footer nav i img {
     width: 12vw;
+  }
+}
+
+.products .products__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px #22221f;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all, 0.6s, ease;
+}
+@media (hover: hover) {
+  .products .products__item:hover {
+    transform: scale(1.05);
   }
 }/*# sourceMappingURL=main.css.map */
