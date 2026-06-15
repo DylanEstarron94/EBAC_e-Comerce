@@ -1,3 +1,4 @@
+@use "./base" as *;
 * {
     box-sizing: border-box;
 }
@@ -114,7 +115,7 @@ main {
         padding: 25px;
         box-sizing: border-box;
         position: fixed;
-        right: -100%;
+        right: 0%;
         top: 0;
         height: 100vh;
         overflow-y: auto;
@@ -133,6 +134,7 @@ main {
             border-bottom: 1px solid $darkColor;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 15px;
         }
 
@@ -174,6 +176,12 @@ main {
             .cart__item {
                 .cart__item__img {
                     width: 80px;
+                }
+
+                .cart__item__icon {
+                    img {
+                        width: 25px;
+                    }
                 }
             }
         }
