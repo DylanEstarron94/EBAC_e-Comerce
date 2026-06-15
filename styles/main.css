@@ -1,0 +1,313 @@
+/*
+------------------------------------------------COLORES---------------------------------------------
+*/
+/*
+--------------------------------------------VARIABLES GENERALES-------------------------------------------
+*/
+/*
+---------------------------------------------------MIXINS---------------------------------------------------------
+*/
+/*
+-------------------------------------------------EXTENDS---------------------------------------------------------
+*/
+main .products button {
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  background-color: #6f2875;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+/*
+----------------------------------------------------FUNCIONES-------------------------------------------------------
+*/
+/*
+-------------------------------------------------MEDIA QUERIES-------------------------------------------------------
+*/
+/*
+-------------------------------------------------ESTILOS----------------------------------------------
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #22221f;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+body img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+header {
+  width: 100%;
+  padding: 10px 50px;
+  background-color: #6f2875;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header i {
+  width: 35px;
+  cursor: pointer;
+  display: flex;
+}
+header i img {
+  width: 100%;
+}
+@media (hover: hover) {
+  header i:hover {
+    transform: scale(1.05);
+  }
+}
+@media screen and (max-width: 50rem) {
+  header {
+    padding: 15px;
+  }
+  header > img {
+    width: 55px;
+  }
+  header i {
+    width: 30px;
+  }
+}
+
+main {
+  flex: 1;
+}
+main .banner {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  background-image: url("/img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
+}
+main .banner h2 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 10px;
+}
+main .banner p {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 25px;
+  opacity: 0.7;
+}
+main .products {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+main .products article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px #22221f;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all, 0.6s, ease;
+}
+@media (hover: hover) {
+  main .products article:hover {
+    transform: scale(1.05);
+  }
+}
+main .products h3 {
+  font-weight: 600;
+  font-size: 17px;
+}
+main .products img {
+  width: 100%;
+  cursor: pointer;
+}
+main .products .item__button--no_stock {
+  background-color: rgba(111, 40, 117, 0.3137254902);
+  cursor: not-allowed;
+}
+main .cart {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: #fff;
+  padding: 25px;
+  box-sizing: border-box;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: -19px -1px 22px -15px #22221f;
+  z-index: 1000;
+  transition: rigth 0.3s ease;
+}
+main .cart .cart__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+}
+main .cart div {
+  border-bottom: 1px solid #22221f;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+main .cart img {
+  width: 60px;
+}
+main .cart:nth-child(2) {
+  font-weight: 700;
+}
+main .cart i {
+  width: 30px;
+  cursor: pointer;
+}
+main .cart i img {
+  width: 100%;
+}
+@media screen and (max-width: 50rem) {
+  main .products {
+    width: 95%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  main .products .products__item .products__item__img {
+    width: 200px;
+  }
+  main .cart {
+    width: 60%;
+    top: 80px;
+    bottom: 0;
+  }
+  main .cart .cart__item .cart__item__img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 30rem) {
+  main .banner {
+    padding: 10px 0;
+  }
+  main .banner h2 {
+    font-size: 20px;
+  }
+  main .banner p {
+    font-size: 17px;
+  }
+  main .products {
+    width: 90%;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  main .products__item .products__item__img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  main .products__item h3,
+  main .products__item p {
+    padding: 0 10px;
+  }
+  main .cart {
+    width: 100%;
+    top: 70px;
+    bottom: 0;
+    right: -100;
+    box-shadow: none;
+  }
+  main .cart h2 {
+    padding: 15px 0;
+  }
+  main .cart div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .cart div .cart__item__img {
+    width: 100px;
+  }
+  main .cart div p:nth-child(3) {
+    align-self: center;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+  background-color: #6f2875;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: auto;
+}
+@media screen and (max-width: 30rem) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer .footer__nav {
+  display: flex;
+}
+@media screen and (max-width: 50rem) {
+  footer .footer__nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 30rem) {
+  footer .footer__nav .footer__nav__links {
+    flex-direction: column;
+  }
+}
+footer nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 2rem;
+}
+footer nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+@media (hover: hover) {
+  footer nav a:hover {
+    color: #22221f;
+  }
+}
+footer nav i img {
+  width: 6vw;
+  max-width: 50px;
+}
+@media screen and (max-width: 50rem) {
+  footer nav i img {
+    width: 10vw;
+  }
+}
+@media screen and (max-width: 30rem) {
+  footer nav i img {
+    width: 12vw;
+  }
+}/*# sourceMappingURL=main.css.map */

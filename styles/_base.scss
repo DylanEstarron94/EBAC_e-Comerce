@@ -1,0 +1,61 @@
+/*
+------------------------------------------------COLORES---------------------------------------------
+*/
+$mainColor: #6f2875;
+$darkColor: #22221f;
+$whiteColor: #fff;
+$noStock: #6f287550;
+
+/*
+--------------------------------------------VARIABLES GENERALES-------------------------------------------
+*/
+$fontFmalily: "Lexend", Arial, Helvetica, sans-serif;
+$paddingRecurrent: 0 10px;
+$fontWeight: 600;
+
+/*
+---------------------------------------------------MIXINS---------------------------------------------------------
+*/
+@mixin flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+-------------------------------------------------EXTENDS---------------------------------------------------------
+*/
+%button {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    font-family: $fontFmalily;
+    background-color: $mainColor;
+    border: none;
+    border-radius: 10px;
+    color: $whiteColor;
+    font-weight: $fontWeight;
+    margin-top: auto;
+}
+
+/*
+----------------------------------------------------FUNCIONES-------------------------------------------------------
+*/
+@function divUnits($value, $quantity) {
+    $result: $value / $quantity;
+    @return $result;
+}
+
+/*
+-------------------------------------------------MEDIA QUERIES-------------------------------------------------------
+*/
+@mixin respond-to ($breakpoint) {
+    @if $breakpoint == 'tablet' {
+        @media screen and (max-width:50rem) { @content; }
+    }@else if $breakpoint== 'mobile' {
+        @media screen and (max-width: 30rem) { @content; }
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) { @content; }
+}

@@ -1,0 +1,22 @@
+.products{
+    .products__item {
+            @include flexbox;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px $darkColor;
+            overflow: hidden;
+            background-color: $whiteColor;
+            transition: all, .6s, ease;
+
+            @include hover {
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+         button {
+            @extend %button;
+        }
+}
