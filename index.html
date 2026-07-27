@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Tienda Code & Coffee</title>
+    <script src="/js/functions.js" defer></script>
+    <title>eComerce</title>
 </head>
 
 <body>
     <header class="header">
-        <i class="header__icon"><img src="img/menu.png" alt="icono menu" /></i>
+        <i class="header__icon" id="menu__icon"><img src="img/menu.png" alt="icono menu" /></i>
         <img src="img/logo.png" alt="logo" class="header__img" />
-        <i class="header__icon header__icon--click"><img src="img/carrito.png" alt="icono carrito" /></i>
+        <i class="header__icon" id="cart__icon"><div class = "empty" id="cart__elements__id"></div><img src="img/carrito.png" alt="icono carrito" /></i>
     </header>
 
     <main class="main">
@@ -33,9 +34,9 @@
             </article>
 
             <article class="products__item">
-                <img src="img/jeans.png" alt="jeans" class="products__item__img" />
-                <h3 class="products__item__h3">Jeans azules</h3>
-                <p class="products__item__p">$800</p>
+                <img src="img/chaqueta.png" alt="chaqueta negra" class="products__item__img" />
+                <h3 class="products__item__h3">Chaqueta</h3>
+                <p class="products__item__p">$1300</p>
                 <button class="products__item__button">agregar al carrito</button>
             </article>
 
@@ -62,7 +63,7 @@
 
             <article class="products__item">
                 <img src="img/zapatilla-blanca.avif" alt="Zapatilla blanca mujer" class="products__item__img" />
-                <h3 class="products__item__h3">Zapatilla blanca para mujer</h3>
+                <h3 class="products__item__h3">Zapatilla blanca</h3>
                 <p class="products__item__p">$890</p>
                 <button class="products__item__button">agregar al carrito</button>
             </article>
@@ -76,7 +77,7 @@
 
             <article class="products__item">
                 <img src="img/chaqueta.png" alt="chaqueta negra" class="products__item__img" />
-                <h3 class="products__item__h3">Chaqueta para caballero</h3>
+                <h3 class="products__item__h3">Chaqueta</h3>
                 <p class="products__item__p">$1300</p>
                 <button class="products__item__button item__button--no_stock">agregar al carrito</button>
             </article>
@@ -97,14 +98,14 @@
 
             <article class="products__item">
                 <img src="img/zapatilla-blanca.avif" alt="Zapatilla blanca mujer" class="products__item__img" />
-                <h3 class="products__item__h3">Zapatilla blanca para mujer</h3>
+                <h3 class="products__item__h3">Zapatilla blanca</h3>
                 <p class="products__item__p">$890</p>
                 <button class="products__item__button ">agregar al carrito</button>
             </article>
 
             <article class="products__item">
                 <img src="img/chaqueta.png" alt="chaqueta negra" class="products__item__img" />
-                <h3 class="products__item__h3">Chaqueta para caballero</h3>
+                <h3 class="products__item__h3">Chaqueta</h3>
                 <p class="products__item__p">$1300</p>
                 <button class="products__item__button ">agregar al carrito</button>
             </article>
@@ -112,39 +113,28 @@
 
         <section class="cart">
             <h2 class="cart__title">CARRITO</h2>
-            <div class="cart__item">
-                <img src="img/chaqueta.png" alt="" class="cart__item__img" />
-                <p class="cart__item__desc">chaqueta</p>
-                <p class="cart__item__price">$1300</p>
-                <i class="cart__item__icon"><img src="img/recycle.png" alt="icono quitar" class="delete__icon" /></i>
+
+            <div class="cart__product-container">
+
             </div>
 
-            <div class="cart__item">
-                <img src="img/jeans.PNG" alt="" class="cart__item__img" />
-                <p class="cart__item__desc">chaqueta</p>
-                <p class="cart__item__price">$1300</p>
-                <i class="cart__item__icon"><img src="img/recycle.png" alt="icono quitar" class="delete__icon" /></i>
+            <div class="button">
+                <button class="cart__button">comprar</button>
             </div>
+        </section>
 
-            <div class="cart__item">
-                <img src="img/vestido-verano.PNG" alt="" class="cart__item__img" />
-                <p class="cart__item__desc">chaqueta</p>
-                <p class="cart__item__price">$1300</p>
-                <i class="cart__item__icon"><img src="img/recycle.png" alt="icono quitar" class="delete__icon" /></i>
-            </div>
-
-            <div class="cart__item">
-                <img src="img/zapatilla-blanca.avif" alt="" class="cart__item__img" />
-                <p class="cart__item__desc">chaqueta</p>
-                <p class="cart__item__price">$1300</p>
-                <i class="cart__item__icon"><img src="img/recycle.png" alt="icono quitar" class="delete__icon" /></i>
-            </div>
-
-            <div class="cart__item">
-                <img src="img/zapato-negro.png" alt="" class="cart__item__img" />
-                <p class="cart__item__desc">chaqueta</p>
-                <p class="cart__item__price">$1300</p>
-                <i class="cart__item__icon"><img src="img/recycle.png" alt="icono quitar" class="delete__icon" /></i>
+        <section class="lateralMenu">
+            <i><img id="close_logo" src="./img/cerrar.png" alt=""></i>
+            <div class="menuOptions">
+                <h3>catalogo</h3>
+                <h3>Nuevos productos</h3>
+                <h3>Promociones</h3>
+                <h3>catalogo</h3>
+                <h3>Nuevos productos</h3>
+                <h3>Promociones</h3>
+                <h3>catalogo</h3>
+                <h3>Nuevos productos</h3>
+                <h3>Promociones</h3>
             </div>
         </section>
     </main>
@@ -161,14 +151,14 @@
                 <a href="">Registro</a>
                 <a href="">Términos y Condiciones</a>
             </nav>
-            
+
             <nav class="footer__nav__icon">
                 <i><a href="http://www.facebook.com" target="_blank"><img src="img/facebook.png" alt=""></a></i>
                 <i><a href="http://www.instagram.com" target="_blank"><img src="img/instagram.png" alt=""></a></i>
                 <i><a href="http://www.x.com" target="_blank"><img src="img/X-logo.png" alt=""></a></i>
             </nav>
         </article>
-        
+
         <article class="footer__text">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, dolorem totam. Expedita vel quo
                 repudiandae quam incidunt mollitia cupiditate autem laudantium voluptas, reiciendis tenetur deserunt ea

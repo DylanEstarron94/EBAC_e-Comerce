@@ -22,3 +22,12 @@
             @extend %button;
         }
 }
+
+.cart {
+    .button {
+        .cart__button {
+            @extend %button;
+            position: sticky;
+        }
+    }
+}
