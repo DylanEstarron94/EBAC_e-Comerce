@@ -3,13 +3,14 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     @include flexbox;
     font-size: 15px;
     color: $darkColor;
     font-family: $fontFmalily;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x:hidden;
+    width: 100%;
     max-width: 100vw;
 
     img {
@@ -127,16 +128,17 @@ main {
         padding: 10px;
         box-sizing: border-box;
         position: fixed;
-        right: -100%;
+        right: 0%;
         top: 120px;
+        transform: translateX(100%);
         height: auto;
         overflow-y: auto;
         box-shadow: -19px -1px 22px -15px $darkColor;
         z-index: 1000;
-        transition: all 0.25s ease;
+        transition: transform 0.25s ease;
 
         &.show {
-            right: 0%;
+            transform: translateX(0);
         }
 
         .cart__title {
@@ -183,7 +185,8 @@ main {
         @include flexbox;
         position: fixed;
         top: 120px;
-        left: -150%;
+        left: 0;
+        transform: translateX(-100%);
         background-color: $mainColor;
         width: 500px;
         height: 100%;
@@ -191,10 +194,10 @@ main {
         box-shadow: 19px 1px 22px -15px $darkColor;
         z-index: 1000;
         text-align: center;
-        transition: all 0.25s ease;
+        transition: transform 0.25s ease;
 
         &.showMenu {
-            left: 0%;
+            transform: translateX(0);
         }
 
         i {
