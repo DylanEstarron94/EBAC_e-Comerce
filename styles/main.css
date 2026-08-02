@@ -33,7 +33,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   display: flex;
   flex-direction: column;
   font-size: 15px;
@@ -44,7 +45,8 @@ html, body {
   width: 100%;
   max-width: 100vw;
 }
-html img, body img {
+html img,
+body img {
   width: 100px;
   height: auto;
   display: block;
@@ -191,6 +193,9 @@ main .cart i {
 main .cart i img {
   width: 100%;
 }
+main .cart button {
+  font-size: 1.2rem;
+}
 main .lateralMenu {
   display: flex;
   flex-direction: column;
@@ -264,18 +269,24 @@ main .lateralMenu .menuOptions {
     font-size: 17px;
   }
   main .products {
-    width: 90%;
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-  main .products__item .products__item__img {
     width: 100%;
-    max-width: 200px;
-    margin-bottom: 10px;
-  }
-  main .products__item h3,
-  main .products__item p {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 2fr));
     padding: 0 10px;
+    margin: 1rem 0;
+  }
+  main .products .products__item .products__item__img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 0;
+  }
+  main .products .products__item h3,
+  main .products .products__item p {
+    font-size: 0.85rem;
+    margin: 5px;
+    padding: 0 10px;
+  }
+  main .products .products__item button {
+    font-size: 0.7rem;
   }
   main .cart {
     top: 85px;
